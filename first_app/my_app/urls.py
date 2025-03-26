@@ -4,7 +4,10 @@ from . import views
 
 #Добавляем пути к страницам
 urlpatterns = [
-    path('', views.index),
-    path('data', views.data),
-    path('test', views.test)
+    path('', views.index, name='home'),
+    path('deepseek', views.deepseek, name='page1'),
+    path('qwen', views.qwen, name='page2'),
+    path('hailuo', views.hailuo, name='page3'),
+    #path('data', views.data),
+    #path('test', views.test)
 ]
