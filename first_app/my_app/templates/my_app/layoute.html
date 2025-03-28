@@ -1,10 +1,10 @@
 {% load static %}
-<!doctype html>
+<! doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>
@@ -17,18 +17,25 @@
 
 </head>
 <body>
-
-    <!--Подключение меню-->
-    {% include 'my_app/navv.html' %}
-
-    {% block content %}
-    {% endblock %}
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2">
+                <!--Подключение меню-->
+                {% include 'my_app/navv.html' %}
+            </aside>
+            <main class="col-md-9 col-lg-10">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
 
     <!--Подключение футера-->
     {% include 'my_app/fut.html' %}
 
     <!--Подключение JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
