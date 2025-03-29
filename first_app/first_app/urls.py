@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-#Добавляем путь к своему приложению
+#Добавляем пути к своим приложениям
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('my_app.urls')),

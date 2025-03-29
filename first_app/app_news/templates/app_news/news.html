@@ -1,3 +1,4 @@
+<!-- Указываем базовую страницу -->
 {% extends 'my_app/layoute.html' %}
 
 {% block title %}
@@ -9,12 +10,13 @@
 
 	<h1>Новостная страница</h1>
 
+	<!-- Перебираем все новости в списке -->
 	{% for new in news %}
-
+		<!-- Выводим на сайт всю информацию по новости -->
 		<div>
 			<h3> {{ new.title }} </h3>
-			<p> Автор: {{ new.author }} </p>
-			<p> Дата публикации: {{ new.pub_date }} </p>
+			<p><b> Автор: </b> {{ new.author }} </p>
+			<p><b> Дата публикации: </b> {{ new.pub_date }} </p>
 			<br>
 			<p> {{ new.short_description }} </p>
 			<br>
