@@ -4,7 +4,7 @@ from django.db import models
 
 class News_post(models.Model):
     author = models.CharField('Автор', max_length=30)
-    title = models.CharField('Название новости', max_length=50)
+    title = models.CharField('Название новости', max_length=100)
     short_description = models.CharField('Краткое описание новости', max_length=200)
     text = models.TextField('Новость')
     pub_date = models.DateTimeField('Дата публикации')

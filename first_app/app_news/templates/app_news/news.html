@@ -10,19 +10,27 @@
 
 	<h1>Новостная страница</h1>
 
-	<!-- Перебираем все новости в списке -->
-	{% for new in news %}
-		<!-- Выводим на сайт всю информацию по новости -->
-		<div>
-			<h3> {{ new.title }} </h3>
-			<p><b> Автор: </b> {{ new.author }} </p>
-			<p><b> Дата публикации: </b> {{ new.pub_date }} </p>
-			<br>
-			<p> {{ new.short_description }} </p>
-			<br>
-			<p> {{ new.text }} </p>
-		</div>
-
-	{% endfor %}
+	<!-- Проверяем есть ли новости в списке -->
+	{% if news %}
+		<!-- Перебираем все новости в списке -->
+		{% for new in news %}
+			<!-- Выводим на сайт всю информацию по новости -->
+			<div class="card">
+				<div class="card" style="width: 80rem;">
+					<div class="card-body">
+						<h3> {{ new.title }} </h3>
+						<p><b> Автор: </b> {{ new.author }} </p>
+						<p><b> Дата публикации: </b> {{ new.pub_date }} </p>
+						<br>
+						<p> {{ new.short_description }} </p>
+						<br>
+						<p> {{ new.text }} </p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h4>Новостей ещё нет.</h4>
+	{% endif %}
 
 {% endblock %}
